@@ -1,5 +1,6 @@
 #Ignore node modules (will be installed during docker build)
 node_modules/
 
-#Ignoring git folders
-.git
+#Ignoring git and tekton folders
+.git/
+tekton/
