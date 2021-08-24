@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+- route.yaml
+commonLabels:
+  app: awesome-react-app
+  app.kubernetes.io/instance: awesome-react-app-instance
+  app.kubernetes.io/name: awesome-react-app
+images:
+- name: '*'
+  newName: quay.io/rene_auberger/awesome-react-app
+  newTag: 69cc2c984416a2dcc1a06d375f65da77efe86950
